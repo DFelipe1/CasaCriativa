@@ -1,0 +1,41 @@
+<div class="modal">
+    <div class="content">
+        <h1>Nova Ideia</h1>
+
+        <form action="/" method="post"  >
+
+            <div class="line-form">
+                <div>
+                    <label for="title">Titulo da Ideia</label>
+                    <input type="text" name="title" >
+                </div>
+
+                <div>
+                    <label for="category">Categoria da Ideia</label>
+                    <input type="text" name="category" >
+                </div>
+            </div>
+
+            <label for="image">Link da imagem</label>
+            <input type="text" name="image" placeholder="http://">
+
+            <label for="description">Descrição da ideia</label>
+            <textarea name="description" id="" cols="30" rows="10"></textarea>
+
+            <label for="link">Link da ideia</label>
+            <input type="text" name="link" id="">
+
+            <footer>
+                <button type="submit" >Salvar</button>
+            </footer>
+            
+            
+        </form>
+        <div class="close" onclick="modalToggle()">
+            <h1>X</h1>
+        </div>
+    </div>
+    
+    
+</div>
+

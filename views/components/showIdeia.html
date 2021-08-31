@@ -1,0 +1,13 @@
+{% for idea in ideas %}
+    <div class="card-ideia">
+        <div class="img">
+            <img src="{{idea.image}}" alt="{{idea.title}}">
+        </div>
+        <div class="info-ideia">
+            <h3 class="title">{{idea.title}}</h3>
+            <p class="type">{{idea.category}}</p>
+            <p class="description">{{idea.description}}</p>
+            <h6><a href="{{idea.link}}" target="_blank" class="button overlay">Ir para a Ideai</a></h6>
+        </div>
+    </div>
+{% endfor %}

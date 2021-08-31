@@ -1,0 +1,53 @@
+{% extends "components/layout.html" %}
+
+{% block content %}
+<section class="left">
+    <div id="logo">
+        <img src="./images/Logo.png" alt="Logo">
+    </div>
+
+    <div class="description">
+        <p>
+            Ficar em casa em períodos longos, 
+            não deve ser nada fácil.
+        </p>
+
+        <p>
+            Por isso, iremos catalogar ideias, 
+            <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong>
+            e tudo que for
+            necessário para tornar esse 
+            momento mais interessante.
+        </p>
+
+        <p>
+            Comece clicando em <span>ver ideias</span> para
+            ver as ideias cadastradas e contribua <span>adicionando a sua ideias</span>
+        </p>
+
+        <footer class="group-buttons">
+            <a href="#" class="button overlay"  onclick="modalToggle()">+ adicionar Ideia</a>
+            <a href="/ideias" class="button">Ver ideias</a>
+        </footer>
+    </div>
+
+    <footer>
+        <p>
+            Com ♥️ <a href="http://rocketseat.com.br">Rocketseat</a>
+        </p>
+    </footer>
+
+    
+</section>
+
+<section class="right">
+
+    {% include "components/showIdeia.html"%}
+    
+
+    
+
+
+</section>
+
+{% endblock %}

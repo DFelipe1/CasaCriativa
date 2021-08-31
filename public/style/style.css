@@ -1,0 +1,116 @@
+.container {
+    position: relative;
+    width: 100%;
+    
+    max-width: 70%;
+    margin: 4rem auto;
+    display: flex;
+    gap: 1.5rem;
+    
+}
+
+.container .left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.left #logo{
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+
+
+
+.left .description {
+    width: 100%;
+}
+
+.left .description p {
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    text-align: justify;
+    
+}
+
+.left .description p:last-child {
+    margin-bottom: 0;
+}
+
+.left .description p span {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.left .description .group-buttons {
+    width: 100%;
+    display: flex;
+    margin-top: 4rem;
+    justify-content: space-evenly;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+
+
+
+
+.left footer {
+    margin-top: 5rem;
+    font-size: 1.7rem;
+}
+
+.container .right {
+    width: 100%;
+}
+
+ .card-ideia {
+    width: 100%;
+    padding: 5rem;
+    border-radius: 10px;
+    background: #fff;
+
+    display: flex;
+    margin-bottom: 5rem;
+    gap: 1rem;
+}
+
+.card-ideia .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.card-ideia .img img {
+    width: 9rem;
+    object-fit: cover;
+    
+}
+
+.card-ideia .info-ideia {
+    max-width: 70%;
+}
+
+.card-ideia .info-ideia .title {
+    margin-bottom: .5rem;
+}.card-ideia .info-ideia .type {
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.card-ideia .info-ideia h6 {
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    margin-top: 1rem;
+}
+
+.card-ideia .info-ideia .button {
+    padding: 0;
+}

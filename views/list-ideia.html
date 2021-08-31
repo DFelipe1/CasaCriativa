@@ -1,0 +1,52 @@
+{% extends "components/layout.html" %}
+
+{%block head%}
+    <title>CasaCriativa - Ideias</title>
+
+    <link rel="stylesheet" href="./style/global.css">
+    <link rel="stylesheet" href="./style/list-ideia.css">
+    <link rel="stylesheet" href="./style/modal.css">
+    {%endblock%}
+
+
+{% block content %}
+<header>
+    <div id="logo">
+        <img src="./images/Logo.png" alt="Logo">
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#" class="button" onclick="modalToggle()">Nova ideia</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="header">
+        <p>em exibição</p>
+        <h1>Ideia</h1>
+    </div>
+
+    <div class="Painel-ideia">
+        <div class="ideias-wapper">
+
+            {% include "components/showIdeia.html"%}
+
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Com ♥️ <a href="http://rocketseat.com.br">Rocketseat</a>
+        </p>
+    </footer>
+</main>
+
+{% endblock %}
