@@ -17,12 +17,8 @@
 
     <nav>
         <ul>
-            <li>
-                <a href="/">Inicio</a>
-            </li>
-
-            <li>
-                <a href="#" class="button" onclick="modalToggle()">Nova ideia</a>
+            <li id=containerNewIdea>
+                <a href="#" id="newIdea" class="button" onclick="modalToggle()"></a>
             </li>
         </ul>
     </nav>
@@ -42,11 +38,50 @@
         </div>
     </div>
 
-    <footer>
-        <p>
-            Com ♥️ <a href="http://rocketseat.com.br">Rocketseat</a>
-        </p>
-    </footer>
+    
 </main>
 
+<a href="#" class="button button-float" onclick="modalToggle()">+</a>
+
 {% endblock %}
+
+{%block script%}
+    <script>
+        function buttonText() { 
+            if (window.innerWidth < 600){
+                document.getElementById('newIdea').innerText = '+'
+            } else {
+                document.getElementById('newIdea').innerText = 'Nova ideia'
+            }
+        }
+        buttonText() 
+
+        window.onresize = function() { 
+            if (window.innerWidth < 600){
+                document.getElementById('newIdea').innerText = '+'
+            } else {
+                document.getElementById('newIdea').innerText = 'Nova ideia'
+            }
+        }
+
+        function scrollup() {
+            const scrollUp = document.querySelector('.button-float');
+
+            if(this.scrollY >= 100) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
+        }
+
+        window.addEventListener('scroll', scrollup)
+
+        // setInterval(() => {
+        //     let screen = window.innerWidth
+
+        //     if(screen > 600){
+               
+        //     } else {
+                
+        //     }
+        // }, 2000)
+    </script>
+
+    <script src="/scripts/modal.js"></script>
+{%endblock %}

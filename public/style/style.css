@@ -1,44 +1,48 @@
 .container {
-    position: relative;
     width: 100%;
-    
     max-width: 70%;
-    margin: 4rem auto;
-    display: flex;
-    gap: 1.5rem;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+
+    
     
 }
 
+/* lado Esquedo do layout */
 .container .left {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 5rem;
-}
 
-.left #logo{
     width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
+    
+
+    margin-bottom: 5rem;
     
 }
 
+#logo {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    margin-bottom: 5rem;
+}
+
+#logo img {
+    width: 100%;
+    max-width: 300px;
+}
 
 .left .description {
-    width: 100%;
-}
-
-.left .description p {
-    margin-bottom: 3rem;
-    font-size: 2.2rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     text-align: justify;
-    
-}
 
-.left .description p:last-child {
-    margin-bottom: 0;
+    font-size: 2rem;
 }
 
 .left .description p span {
@@ -49,33 +53,35 @@
 .left .description .group-buttons {
     width: 100%;
     display: flex;
-    margin-top: 4rem;
+    margin-top: 3rem;
     justify-content: space-evenly;
     align-items: center;
 
-    gap: 2rem;
+    
 }
 
 
 
-
-
-.left footer {
-    margin-top: 5rem;
-    font-size: 1.7rem;
-}
-
+/* Lado direito do layout */
 .container .right {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
- .card-ideia {
+/* Card */
+.card-ideia {
     width: 100%;
-    padding: 5rem;
+    
+    padding: 2rem;
     border-radius: 10px;
     background: #fff;
 
     display: flex;
+    flex-direction: column;
     margin-bottom: 5rem;
     gap: 1rem;
 }
@@ -94,7 +100,8 @@
 }
 
 .card-ideia .info-ideia {
-    max-width: 70%;
+    max-width: 100%;
+    text-align: center;
 }
 
 .card-ideia .info-ideia .title {
@@ -103,6 +110,8 @@
     font-weight: 300;
     margin-bottom: 1rem;
 }
+
+
 
 .card-ideia .info-ideia h6 {
     font-weight: 500;
@@ -113,4 +122,179 @@
 
 .card-ideia .info-ideia .button {
     padding: 0;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 700px;
+        display: flex;
+
+        gap: 2.2rem;
+    }
+
+    .container .left {
+        width: 70%;
+    }
+
+    .left .description {
+        gap: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    .card-ideia {
+        flex-direction: row;
+    }
+
+    .card-ideia .info-ideia {
+        text-align: left;
+    }
+
+    .card-ideia .info-ideia .description {
+        font-size: 1.5rem;
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 100%;
+        max-width: 70%;
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem;
+    
+        display: flex;
+        gap: 2rem;
+        
+    }
+    
+    /* lado Esquedo do layout */
+    .container .left {
+    
+        width: 50%;
+        max-width: 400px;
+        
+    }
+    
+    #logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        margin-bottom: 5rem;
+    }
+    
+    #logo img {
+        width: 100%;
+    }
+    
+    .left .description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        text-align: justify;
+    
+        font-size: 2rem;
+    }
+    
+    .left .description p span {
+        font-weight: 700;
+        color: var(--color-primary);
+    }
+    
+    .left .description .group-buttons {
+        width: 100%;
+        display: flex;
+        margin-top: 3rem;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        
+    }
+    
+    .left footer {
+        margin-top: 5rem;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    
+    /* Lado direito do layout */
+    .container .right {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+    
+    /* Card */
+    .card-ideia {
+        width: 100%;
+        
+        padding: 2rem;
+        border-radius: 10px;
+        background: #fff;
+    
+        display: flex;
+        margin-bottom: 5rem;
+        gap: 1rem;
+    }
+    
+    .card-ideia .img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+    
+    .card-ideia .img img {
+        width: 9rem;
+        object-fit: cover;
+        
+    }
+    
+    .card-ideia .info-ideia {
+        max-width: 70%;
+    }
+    
+    .card-ideia .info-ideia .title {
+        margin-bottom: .5rem;
+    }.card-ideia .info-ideia .type {
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+    
+    .card-ideia .info-ideia h6 {
+        font-weight: 500;
+        font-size: 1.5rem;
+    
+        margin-top: 1rem;
+    }
+    
+    .card-ideia .info-ideia .button {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .card-ideia .info-ideia .description {
+        font-size: 1.5rem;
+        width: 100%;
+        overflow: auto;
+        white-space: normal;
+        text-overflow: unset;
+    }
 }

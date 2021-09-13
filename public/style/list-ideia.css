@@ -1,14 +1,26 @@
 .container {
     width: 100%;
-    max-width: 70%;
-    margin: 4rem auto;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+#logo {
+    
+    margin-right: 2rem;
+}
+
+#logo img {
+    width: 100%;
+    max-width: 250px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 header nav ul {
@@ -18,29 +30,59 @@ header nav ul {
 }
 
 ul li a {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 500;
 }
 ul li:first-child a {
     transition: color 0.3s;
 }
-ul li:first-child a:hover {
-    color: var(--color-primary);
-}
+
 ul li a.button{
-    padding: 1.5rem 4rem;
+    padding: 1rem 1.5rem;
     font-size: 1.5rem;
+    background: transparent;
+    border: solid 2px var(--color-primary);
+    color: var(--color-primary);
+    transition: background 1s, color 0.5s;
+    
+}
+
+ul li a.button:hover {
+    background: var(--color-primary);
+    color: #fff;
 }
 
 
 
+/* MAIN */
+main .header {
+    width: 100%;
+    text-align: center;
+    line-height: 3rem;
+
+    margin: 5rem 0;
+}
+
+main .header p {
+    font-size: 1.6rem;
+}
+
+main .header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* Card */
 .card-ideia {
     width: 100%;
-    padding: 5rem;
+    position: relative;
+    
+    padding: 2rem;
     border-radius: 10px;
     background: #fff;
 
     display: flex;
+    flex-direction: column;
     margin-bottom: 5rem;
     gap: 1rem;
 }
@@ -59,10 +101,8 @@ ul li a.button{
 }
 
 .card-ideia .info-ideia {
-    min-width: 70%;
-    max-width: 70%;
-    min-height: 100%;
-    position: relative;
+    max-width: 100%;
+    text-align: center;
 }
 
 .card-ideia .info-ideia .title {
@@ -73,26 +113,7 @@ ul li a.button{
 }
 .card-ideia .info-ideia .description {
     margin-bottom: 3rem;
-}
-
-
-
-
-main .header {
-    width: 100%;
-    text-align: center;
-    line-height: 3rem;
-
-    margin: 5rem 0;
-}
-
-main .header p {
-    font-size: 1.6rem;
-}
-
-main .header h1 {
-    font-size: 4rem;
-    font-weight: 600;
+    
 }
 
 
@@ -102,52 +123,157 @@ main .header h1 {
     max-width: 80%;
     
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     
-    /* flex-direction: row-reverse; */
+    flex-direction: column-reverse;
     gap: 4rem;
 
     margin: 0 auto;
     
 }
 
-.Painel-ideia .ideias-wapper .card-ideia {
-    width: 100%;
-    max-width: 50rem;
-    height: 100%;
-    padding: 2rem;
-    margin: 0;
-}
 
-.ideias-wapper .card-ideia .img {
-    width: 20%;
-    display: block;
-    text-align: center;
-    
-}
-
-
-
-.ideias-wapper .card-ideia .info-ideia h6 {
-    font-weight: 500;
-   
-    
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.ideias-wapper .card-ideia .info-ideia h6 a {
-    font-size: 1.7rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
 
 footer {
     margin-top: 2rem;
     width: 100%;
     text-align: center;
+}
+
+
+.button-float {
+    position: fixed;
+    right: 3rem;
+    bottom: -20%;
+    width: 50px;
+    height: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: normal;
+    border-radius: 100%;
+    transition: .5s
+}
+
+.button-float.show-scroll {
+    bottom: 5rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 425px) {
+    header {
+        display: block
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    header nav {
+        display: none;
+    }
+
+    .button-float {
+        bottom: 5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Painel-ideia .ideias-wapper{
+       
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        flex-direction: row-reverse;
+ 
+        
+    }
+
+    .ideias-wapper .card-ideia .info-ideia h6 {
+        font-weight: 500;
+       
+        
+        width: 100%;
+        
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+    }
+
+    
+    
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 100%;
+        max-width: 70%;
+        margin: 4rem auto;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    
+    header nav ul {
+        display: flex;
+        gap: 4rem;
+        list-style: none;
+    }
+    
+    ul li a {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    
+    main .header {
+        width: 100%;
+        text-align: center;
+        line-height: 3rem;
+    
+        margin: 5rem 0;
+    }
+    
+    main .header p {
+        font-size: 1.6rem;
+    }
+    
+    main .header h1 {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    
+    
+    
+    .Painel-ideia .ideias-wapper{
+        width: 100%;
+        max-width: 100%;
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        /* flex-direction: row-reverse; */
+        gap: 4rem;
+    
+        margin: 0 auto;
+        
+    }
+    
+   
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        max-width: 1100px;
+    }
 }
