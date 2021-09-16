@@ -79,7 +79,7 @@ a {
 .button.overlay::before {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     
     width: 0;
     height: 2px;
